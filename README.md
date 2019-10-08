@@ -14,6 +14,10 @@ npm install ctx-cil -g
 crx-cli create
 ```
 
+## Examples
+
+![terminal](https://github.com/liustay/crx-cli/blob/master/pic/terminal.png)
+![demo](https://github.com/liustay/crx-cli/blob/master/pic/demo.png)
 
 
 
