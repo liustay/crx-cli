@@ -1,6 +1,8 @@
 
 
-# crx-cli
+# easy-extension-cli
+
+https://img.shields.io/npm/v/easy-extension-cli
 
 ## Install
 
@@ -11,7 +13,7 @@ npm install ctx-cil -g
 ## Usage
 
 ```
-crx-cli create
+easy-extension-cli create
 ```
 
 ## Examples

@@ -17,7 +17,7 @@ program
   Examples:
 
     ${chalk.gray("# create a new chrome-extentions project")}
-    $ crx-cli create`
+    $ easy-extension-cli create`
     )
   })
   .command('create')
@@ -60,7 +60,7 @@ const BOXEN_OPTS = {
 
 function initializing(pkg) {
   const messages = [
-    `🎉  Welcome to use crx-cli ${chalk.grey(`v${pkg.version}`)} `,
+    `🎉  Welcome to use easy-extension-cli ${chalk.grey(`v${pkg.version}`)} `,
     chalk.grey('https://github.com/liustay/crx-cli')
   ];
 
