@@ -1,6 +1,6 @@
 
 
-# 瞎折腾系列之-创建一个Chrome扩展程序的脚手架- crx-cli
+# crx-cli
 
 ## Install
 
