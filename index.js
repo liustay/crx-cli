@@ -61,7 +61,7 @@ const BOXEN_OPTS = {
 function initializing(pkg) {
   const messages = [
     `🎉  Welcome to use easy-extension-cli ${chalk.grey(`v${pkg.version}`)} `,
-    chalk.grey('https://github.com/liustay/crx-cli')
+    chalk.grey('https://github.com/liustay/easy-extension-cli')
   ];
 
   console.log(boxen(messages.join('\n'), BOXEN_OPTS));

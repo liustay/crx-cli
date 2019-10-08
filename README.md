@@ -18,8 +18,8 @@ easy-extension-cli create
 
 ## Examples
 
-![terminal](https://github.com/liustay/crx-cli/blob/master/pic/terminal.png)
-![demo](https://github.com/liustay/crx-cli/blob/master/pic/demo.png)
+![terminal](https://github.com/liustay/easy-extension-cli/blob/master/pic/terminal.png)
+![demo](https://github.com/liustay/easy-extension-cli/blob/master/pic/demo.png)
 
 
 
