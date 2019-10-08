@@ -43,8 +43,7 @@ program
       name: 'description'
     }];
     inquirer.prompt(opts).then((value) => {
-      console.log(value)
-      app = {...value}
+      app = value
       createIcon(app.appName)
       createFiles()
       initializing(pkg)
@@ -62,19 +61,18 @@ const BOXEN_OPTS = {
 };
 
 function initializing(pkg) {
-  const messages = [];
-  messages.push(
-    `🎉  Welcome to use crx-cli ${chalk.grey(`v${pkg.version}`)} `
-  );
-  messages.push(
+  const messages = [
+    `🎉  Welcome to use crx-cli ${chalk.grey(`v${pkg.version}`)} `,
     chalk.grey('https://github.com/liustay/crx-cli')
-  );
+  ];
+
   console.log(boxen(messages.join('\n'), BOXEN_OPTS));
 }
 
 
 // 创建菜单栏icon
 function createIcon(appName) {
+  console.log("Create icon...")
   const canvas = Canvas.createCanvas(48, 48, 'png')
   const ctx = canvas.getContext('2d')
   ctx.beginPath();
@@ -98,6 +96,7 @@ function createFiles() {
 }
 
 function popupPage(app) {
+  console.log("Create popup...")
   return `<!-- You can create popup page here -->
   <html>
     <head>
@@ -119,6 +118,7 @@ function popupPage(app) {
 }
 
 function backgroundPage(){
+  console.log("Create background...")
   return `/*
     Please run it in chrome://extensions/
 
@@ -131,6 +131,7 @@ function backgroundPage(){
 }
 
 function manifestPage(app){
+  console.log("Create manifest...")
   return `{
   "name": "${app.appName}",
   "version": "1.0",
