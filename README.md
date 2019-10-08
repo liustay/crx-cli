@@ -2,7 +2,7 @@
 
 # easy-extension-cli
 
-https://img.shields.io/npm/v/easy-extension-cli
+![badge](https://img.shields.io/npm/v/easy-extension-cli)
 
 ## Install
 
