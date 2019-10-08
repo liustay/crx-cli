@@ -4,10 +4,8 @@ const program = require('commander');
 const inquirer = require('inquirer');
 const chalk = require("chalk");
 const pkg = require('./package.json');
-const Canvas = require('canvas');
 const fs = require("fs");
 const boxen = require('boxen');
-
 
 var app
 
@@ -44,7 +42,7 @@ program
     }];
     inquirer.prompt(opts).then((value) => {
       app = value
-      createIcon(app.appName)
+      createIcon()
       createFiles()
       initializing(pkg)
     })
@@ -71,21 +69,9 @@ function initializing(pkg) {
 
 
 // 创建菜单栏icon
-function createIcon(appName) {
+function createIcon() {
   console.log("Create icon...")
-  const canvas = Canvas.createCanvas(48, 48, 'png')
-  const ctx = canvas.getContext('2d')
-  ctx.beginPath();
-  ctx.arc(24, 24, 24, 0, 2 * Math.PI);
-  ctx.fillStyle = "green";
-  ctx.fill();
-
-  ctx.font = 'bold 30px sans-serif'
-  ctx.fillStyle = "white";
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  ctx.fillText(appName[0].toUpperCase(), 24, 28)
-  fs.writeFileSync('icon.png', canvas.toBuffer())
+  fs.copyFileSync(`${__dirname}/icon.png`,'icon.png')
 }
 
 // 创建文件
